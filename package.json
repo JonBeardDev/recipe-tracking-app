@@ -10,9 +10,12 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1"
+    "@testing-library/user-event": "^7.2.1",
+    "gh-pages": "^5.0.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "docker:build": "docker image build . -t thinkful-ed/zid-fe-react-state-management-xx-assignment",
     "docker:run": "docker run --rm -it -p 3000:3000 thinkful-ed/zid-fe-react-state-management-xx-assignment",
